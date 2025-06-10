@@ -1,126 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fórmula 1 - Paixão pela Velocidade</title>
-<style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #000000; /* preto */
-        color: #f0f0f0;
-    }
-    #corpo {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-    #topo {  
-        background-color: #b30000; /* vermelho escuro */
-        height: 100px;  
-        display: flex;  
-        align-items: center;  
-        justify-content: center;  
-        padding: 0 20px;  
-        font-family: 'Impact', sans-serif;  
-        font-size: 36px; 
-        color: #fff;
-        letter-spacing: 2px;
-        text-shadow: 1px 1px 3px #330000;
-    }
-    #menu {
-        background-color: #1a1a1a; /* quase preto */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        gap: 30px;
-        font-weight: bold;
-    }
-    #menu a {
-        color: #ff1a1a; /* vermelho vibrante */
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-    }
-    #menu a:hover {
-        background-color: #b30000; /* vermelho escuro */
-        color: #fff;
-    }
-    #conteudo {
-        display: flex;
-        flex: 1;
-        padding: 20px;
-        gap: 20px;
-    }
-    #esquerda, #direita {
-        flex: 1;
-        background-color: #000000;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 0 10px #000000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        color: #f0f0f0;
-    }
-    #esquerda img, #direita img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        border: 3px solid #b30000;
-        margin-bottom: 15px;
-        filter: drop-shadow(0 0 5px #ff1a1a);
-    }
-    #centro {
-        flex: 2;
-        background-color: #1a1a1a;
-        border-radius: 12px;
-        padding: 25px;
-        box-shadow: 0 0 15px #ff1a1a;
-        color: #fff;
-        font-size: 1.2rem;
-        line-height: 1.6;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: justify;
-    }
-    #rodape {
-        background-color: #b30000;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-weight: bold;
-        letter-spacing: 1px;
-        box-shadow: 0 -3px 6px #660000;
-    }
-    /* Links ajustes no corpo para pequenos dispositivos */
-    @media(max-width: 768px) {
-        #conteudo {
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fórmula 1 - Equipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* preto */
+            color: #f0f0f0;
+        }
+        #corpo {
+            display: flex;
             flex-direction: column;
+            min-height: 100vh;
         }
-        #esquerda, #centro, #direita {
-            flex: none;
-            width: 100%;
+        #topo {
+            background-color: #b30000; /* vermelho escuro */
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            font-family: 'Impact', sans-serif;
+            font-size: 36px;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px #330000;
+        }
+        #menu {
+            background-color: #1a1a1a; /* quase preto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            gap: 30px;
+            font-weight: bold;
+        }
+        #menu a {
+            color: #ff1a1a; /* vermelho vibrante */
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #menu a:hover {
+            background-color: #b30000; /* vermelho escuro */
+            color: #fff;
+        }
+        #conteudo {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+        #esquerda, #direita {
+            flex: 1;
+            background-color: #000000;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 0 10px #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #f0f0f0;
+        }
+        #esquerda img, #direita img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #b30000;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 5px #ff1a1a);
+        }
+        #centro {
+            flex: 3;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 15px #ff1a1a;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+            overflow-y: auto;
+            max-height: 75vh;
+            text-align: left;
+        }
+        #centro h3 {
+            margin-top: 0;
+        }
+        .equipe {
+            display: flex;
+            gap: 15px;
             margin-bottom: 20px;
+            border-bottom: 1px solid #ff1a1a;
+            padding-bottom: 15px;
         }
-    }
-</style>
+        .equipe img {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #b30000;
+            flex-shrink: 0;
+        }
+        .info-equipe {
+            flex: 1;
+        }
+        .info-equipe h4 {
+            margin: 0 0 5px 0;
+            color: #ff4d4d;
+        }
+        .info-equipe p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #e6e6e6;
+        }
+        #rodape {
+            background-color: #b30000;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 -3px 6px #660000;
+            margin-top: auto;
+        }
+        /* Ajustes para dispositivos pequenos */
+        @media(max-width: 1024px) {
+            #conteudo {
+                flex-direction: column;
+            }
+            #esquerda, #centro, #direita {
+                width: 100%;
+                max-height: none;
+                margin-bottom: 20px;
+            }
+            #centro {
+                max-height: none;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="corpo">
-    <div id="topo">
-        <img src="imagen/Logo.png">
+    <div id="corpo">
+        <div id="topo">
+            <img src="imagen/Logo.png">
 
-        Fórmula 1 - Paixão pela Velocidade
-    </div>
+            Fórmula 1 - Paixão pela Velocidade
+        </div>
+
 
     <!-- Menu -->
     <div id="menu">
@@ -133,37 +167,105 @@
 
     <div id="conteudo">
         <div id="esquerda">
-            
-        </div>
-        <div id="centro">
-           <p>
-            <h3>Equipes da Fórmula 1</h3>
-            <ul>
-                <li><strong>Mercedes:</strong></li>
-                    <img src="imagen/Mercedes.png">
-                     <li>Dominante na última década, com vários campeonatos de construtores.</li>
-                <li><strong>Red Bull Racing:</strong></li> 
-                    
-                    <img src="imagen/Red Bull.png">
 
-                <li>Conhecida por sua inovação e desempenho, especialmente com Max Verstappen.</li>
-                <li><strong>Ferrari:</strong></li>
-                    <img src="imagen/Ferrari.png">
-                <li>A equipe mais histórica da Fórmula 1, com uma rica tradição e muitos títulos.</li>
-                <li><strong>McLaren:</strong> Uma das equipes mais icônicas, com uma história de sucesso e inovação.</li>
-                <li><strong>Aston Martin:</strong> Uma equipe em ascensão, buscando competir com os gigantes da Fórmula 1.</li>
-                <li><strong>Alpine:</strong> A equipe francesa que tem se destacado nas últimas temporadas.</li>
-                <li><strong>AlphaTauri:</strong> A equipe irmã da Red Bull, focada em jovens talentos.</li>
-                <li><strong>Williams:</strong> Uma equipe histórica que busca retornar ao seu antigo esplendor.</li>
-                <li><strong>Haas:</strong> A equipe americana que tem se esforçado para se estabelecer na Fórmula 1.</li>
-                <li><strong>Alfa Romeo:</strong> Uma equipe com uma rica história e um forte compromisso com a competição.</li>
-            </ul>
-           Além da emoção das pistas, a tecnologia utilizada na Fórmula 1 serve muitas vezes de base para o desenvolvimento de carros comerciais e outras inovações automotivas. A ilha de adrenalina e precisão que é a Fórmula 1 fascina fãs de todas as idades e nacionalidades.
-           </p>
+           </div>
+
+        <div id="centro">
+            <h3>Equipes da Fórmula 1 (2025)</h3>
+
+            <div class="equipe">
+                <img src="Equipes/Red Bull.png" alt="Red Bull Racing">
+                <div class="info-equipe">
+                    <h4>Red Bull Racing</h4>
+                    <p><b>Pilotos:</b> Max Verstappen, Sergio Pérez</p>
+                    <p>Equipe austríaca conhecida por sua forte performance e estratégia agressiva.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="Equipes/Mercedes.png" alt="Mercedes">
+                <div class="info-equipe">
+                    <h4>Mercedes</h4>
+                    <p><b>Pilotos:</b> Lewis Hamilton, George Russell</p>
+                    <p>Equipe alemã com um histórico de sucesso, buscando retomar o topo do grid.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="Equipes/Ferrari.png" alt="Ferrari">
+                <div class="info-equipe">
+                    <h4>Ferrari</h4>
+                    <p><b>Pilotos:</b> Charles Leclerc, Carlos Sainz</p>
+                    <p>A lendária equipe italiana, sempre em busca do campeonato mundial.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="Equipes/Mclaren.png" alt="McLaren">
+                <div class="info-equipe">
+                    <h4>McLaren</h4>
+                    <p><b>Pilotos:</b> Lando Norris, Oscar Piastri</p>
+                    <p>Equipe britânica com uma rica história, buscando retornar à sua antiga glória.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="Equipes/Alpine.png" alt="Alpine">
+                <div class="info-equipe">
+                    <h4>Alpine</h4>
+                    <p><b>Pilotos:</b> Pierre Gasly, Esteban Ocon</p>
+                    <p>Equipe francesa com ambições de se tornar uma força na Fórmula 1.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="Equipes/AstonMartin.png" alt="Aston Martin">
+                <div class="info-equipe">
+                    <h4>Aston Martin</h4>
+                    <p><b>Pilotos:</b> Fernando Alonso, Lance Stroll</p>
+                    <p>Equipe britânica com um forte investimento, buscando resultados expressivos.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="Equipes/AlfaRomeo.png" alt="Alfa Romeo">
+                <div class="info-equipe">
+                    <h4>Alfa Romeo</h4>
+                    <p><b>Pilotos:</b> Valtteri Bottas, Guanyu Zhou</p>
+                    <p>Equipe italiana com uma parceria técnica com a Sauber.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="imagen/Equipes/Haas.png" alt="Haas">
+                <div class="info-equipe">
+                    <h4>Haas</h4>
+                    <p><b>Pilotos:</b> Kevin Magnussen, Nico Hülkenberg</p>
+                    <p>Equipe americana buscando se firmar na Fórmula 1.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="imagen/Equipes/RB.png" alt="RB">
+                <div class="info-equipe">
+                    <h4>RB (anteriormente AlphaTauri)</h4>
+                    <p><b>Pilotos:</b> Yuki Tsunoda, Daniel Ricciardo</p>
+                    <p>Equipe italiana focada no desenvolvimento de jovens talentos.</p>
+                </div>
+            </div>
+
+            <div class="equipe">
+                <img src="imagen/Equipes/Sauber.png" alt="Sauber">
+                <div class="info-equipe">
+                    <h4>Sauber (futuramente Audi)</h4>
+                    <p><b>Pilotos:</b> Valtteri Bottas, Guanyu Zhou</p>
+                    <p>Equipe suíça com planos de se tornar a equipe de fábrica da Audi em 2026.</p>
+                </div>
+            </div>
         </div>
+
         <div id="direita">
-        
-        </div>
+          </div>
     </div>
 
     <div id="rodape">
@@ -172,4 +274,3 @@
 </div>
 </body>
 </html>
-
