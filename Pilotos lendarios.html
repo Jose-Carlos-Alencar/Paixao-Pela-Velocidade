@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilotos Lendários da Fórmula 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* preto */
+            color: #f0f0f0;
+        }
+        #corpo {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #topo {  
+            background-color: #b30000; /* vermelho escuro */
+            height: 100px;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            padding: 0 20px;  
+            font-family: 'Impact', sans-serif;  
+            font-size: 36px; 
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px #330000;
+        }
+        #menu {
+            background-color: #1a1a1a; /* quase preto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            gap: 30px;
+            font-weight: bold;
+        }
+        #menu a {
+            color: #ff1a1a; /* vermelho vibrante */
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #menu a:hover {
+            background-color: #b30000; /* vermelho escuro */
+            color: #fff;
+        }
+        #conteudo {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+    #esquerda, #direita {
+        flex: 1;
+        background-color: #1a1a1a;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 0 10px #b30000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        color: #f0f0f0;
+    }
+        #esquerda img, #direita img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #b30000;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 5px #ff1a1a);
+        }
+        #centro {
+            flex: 3;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 15px #ff1a1a;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+            overflow-y: auto;
+            max-height: 75vh;
+            text-align: left;
+        }
+        #centro h3 {
+            margin-top: 0;
+        }
+        .piloto {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ff1a1a;
+            padding-bottom: 15px;
+        }
+        .piloto img {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #b30000;
+            flex-shrink: 0;
+        }
+        .info-piloto {
+            flex: 1;
+        }
+        .info-piloto h4 {
+            margin: 0 0 5px 0;
+            color: #ff4d4d;
+        }
+        .info-piloto p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #e6e6e6;
+        }
+        #rodape {
+            background-color: #b30000;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 -3px 6px #660000;
+            margin-top: auto;
+        }
+        /* Ajustes para dispositivos pequenos */
+        @media(max-width: 1024px) {
+            #conteudo {
+                flex-direction: column;
+            }
+            #esquerda, #centro, #direita {
+                width: 100%;
+                max-height: none;
+                margin-bottom: 20px;
+            }
+            #centro {
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <div id="topo">
+            <img src="imagen/Logo.png" alt="Logo da Fórmula 1" />
+            Fórmula 1 - Pilotos Lendários
+        </div>
+
+       <!-- Menu -->
+    <div id="menu">
+        <a href="Sobre.html">Início</a>
+        <a href="Pilotos.html">Pilotos</a>
+        <a href="Equipes.html">Equipes</a>
+        <a href="Pilotos lendarios.html">Pilotos Lendârios</a>
+        <a href="Contatos.html">Contato</a>
+    </div>
+
+        <div id="conteudo">
+            <div id="esquerda">
+                <!-- Conteúdo opcional da esquerda, por exemplo, destaque ou curiosidades -->
+                <h3>Melhor entre todos</h3>
+                <h3>Ayrton Senna (#12) McLaren</h3>
+                <img src="Pilotos Lendarios/senna2.png" alt="Foto Ayrton Senna">
+                <p>Ayrton Senna, o maior piloto brasileiro e tricampeão mundial.</p>
+            </div>
+
+            <div id="centro">
+                <h3>Todos os Pilotos Lendários da Fórmula 1</h3>
+                
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/senna.png" alt="Ayrton Senna">
+                    <div class="info-piloto">
+                        <h4>Ayrton Senna</h4>
+                        <p>Três vezes campeão mundial, conhecido por sua habilidade excepcional e paixão pela velocidade.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Michael Schumacher.png" alt="Michael Schumacher">
+                    <div class="info-piloto">
+                        <h4>Michael Schumacher</h4>
+                        <p>Sete vezes campeão mundial, um dos maiores nomes da história da Fórmula 1.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Juan Manuel Fangio.png" alt="Juan Manuel Fangio">
+                    <div class="info-piloto">
+                        <h4>Juan Manuel Fangio</h4>
+                        <p>Cinco vezes campeão mundial, uma lenda dos anos 50.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Alain Prost.png" alt="Alain Prost">
+                    <div class="info-piloto">
+                        <h4>Alain Prost</h4>
+                        <p>Quatro vezes campeão mundial, conhecido como "O Professor".</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Niki Lauda.png" alt="Niki Lauda">
+                    <div class="info-piloto">
+                        <h4>Niki Lauda</h4>
+                        <p>Três vezes campeão mundial, famoso por sua recuperação após um grave acidente.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Sebastian Vettel.png" alt="Sebastian Vettel">
+                    <div class="info-piloto">
+                        <h4>Sebastian Vettel</h4>
+                        <p>Quatro vezes campeão mundial, conhecido por sua velocidade e consistência.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Jim Clark.png" alt="Jim Clark">
+                    <div class="info-piloto">
+                        <h4>Jim Clark</h4>
+                        <p>Dois vezes campeão mundial, um dos pilotos mais talentosos da história.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Jackie Stewart.png" alt="Jackie Stewart">
+                    <div class="info-piloto">
+                        <h4>Jackie Stewart</h4>
+                        <p>Três vezes campeão mundial, defensor da segurança no esporte.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Mika Häkkinen.png" alt="Mika Häkkinen">
+                    <div class="info-piloto">
+                        <h4>Mika Häkkinen</h4>
+                        <p>Dois vezes campeão mundial, conhecido por sua rivalidade com Schumacher.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Nelson Piquet.png" alt="Nelson Piquet">
+                    <div class="info-piloto">
+                        <h4>Nelson Piquet</h4>
+                        <p>Três vezes campeão mundial, famoso por sua técnica refinada.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Emerson Fittipaldi.png" alt="Emerson Fittipaldi">
+                    <div class="info-piloto">
+                        <h4>Emerson Fittipaldi</h4>
+                        <p>Dois vezes campeão mundial, primeiro brasileiro a vencer na F1.</p>
+                    </div>
+                </div>
+
+                <div class="piloto">
+                    <img src="Pilotos Lendarios/Lewis.png" alt="Lewis Hamilton">
+                    <div class="info-piloto">
+                        <h4>Lewis Hamilton</h4>
+                        <p>Sete vezes campeão mundial, um dos maiores da história da F1.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="direita">
+                <!-- Conteúdo opcional da direita, como estatísticas ou curiosidades -->
+                <h3>Carro mais dominante da história</h3>
+                <h3>Red Bull RB19</h3>
+                <img src="Pilotos Lendarios/RB19.png" alt="Carro clássico da Fórmula 1">
+                <p>O carro mais dominante da história da Fórmula 1 é considerado o Red Bull RB19 de 2023, com uma taxa de vitória de 95,45% (21 vitórias em 22 corridas). O carro foi pilotado por Max Verstappen e Sergio Pérez.</p>
+            </div>
+        </div>
+
+        <div id="rodape">
+            <p>&copy; 2025 Fórmula 1 - Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
+
